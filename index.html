@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>U-NIT | يونت — Casual Wear Manufacturing Since 2011, Cairo</title>
+<meta name="description" content="U-NIT is a B2B clothing factory in El Matariya, Cairo, since 2011. T-shirts, polos, pants, joggers, tracksuits, sweatshirts and hoodies for brands and wholesalers.">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="assets/icons/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ebe6e4;--card:#f7f4f3;--ink:#0b0b0b;--mut:#585353;--line:#d2cbc9;--acc:#8a8484;--acc-d:#2b2828;--r:14px}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font:400 1.05rem/1.7 Inter,Cairo,system-ui,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+[lang=ar] body{font-family:Cairo,Inter,sans-serif;line-height:1.9}
+img{max-width:100%;display:block}a{color:inherit}
+h1,h2,h3,.logo{font-family:Anton,Impact,Cairo,sans-serif;font-weight:400;line-height:1.02;letter-spacing:.01em;text-transform:uppercase}
+[lang=ar] h1,[lang=ar] h2,[lang=ar] h3{font-family:Cairo,sans-serif;font-weight:800;line-height:1.35;letter-spacing:0;text-transform:none}
+.wrap{width:min(1160px,100% - 36px);margin-inline:auto}
+section{padding:84px 0}
+.eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--acc-d);font-weight:600;margin-bottom:14px}
+[lang=ar] .eyebrow{letter-spacing:0;font-size:.9rem}
+h2{font-size:clamp(2rem,4.5vw,3.1rem);margin-bottom:18px}
+.lead{color:var(--mut);max-width:60ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;border-radius:99px;border:1.5px solid var(--ink);background:var(--ink);color:#fff;font:600 .95rem inherit;text-decoration:none;cursor:pointer;transition:.2s}
+.btn:hover{background:var(--acc-d);border-color:var(--acc-d)}
+.btn.ghost{background:transparent;color:inherit}.btn.ghost:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+header{position:sticky;top:0;z-index:50;background:rgba(235,230,228,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px;gap:14px}
+.logo{font-size:1.9rem;letter-spacing:.06em;text-decoration:none;font-weight:700}
+nav{display:flex;gap:26px;font-size:.92rem;font-weight:500}nav a{text-decoration:none;color:var(--mut)}nav a:hover{color:var(--ink)}
+.lang{min-height:44px;min-width:60px;border:1.5px solid var(--line);background:transparent;border-radius:99px;font:600 .9rem inherit;cursor:pointer;color:var(--ink)}
+.hero{position:relative;min-height:calc(100svh - 68px);display:grid;align-items:end;color:#fff;padding:0;isolation:isolate}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,11,11,.35),rgba(11,11,11,.82))}
+.hero .wrap{padding:90px 0 64px}
+.hero h1{font-size:clamp(2.8rem,8vw,6rem);max-width:13ch;margin-bottom:22px}
+.hero p{max-width:52ch;font-size:1.15rem;opacity:.92;margin-bottom:32px}
+.hero .btn{background:#ebe6e4;color:var(--ink);border-color:#ebe6e4}.hero .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.galX{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}.gal img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:var(--r)}
+.card img{object-position:center 35%;transition:transform .5s}.card:hover img{transform:scale(1.03)}.card{overflow:hidden}.card{position:relative}.soon{position:absolute;top:10px;inset-inline-start:10px;background:#0b0b0bcc;color:#fff;font:600 .72rem Inter,Cairo,sans-serif;font-style:normal;padding:3px 10px;border-radius:99px}
+@media(max-width:520px){.galX{grid-template-columns:1fr 1fr;gap:10px}}
+.stripes{height:44px;background:repeating-linear-gradient(115deg,#0b0b0b 0 7px,transparent 7px 18px)}
+.stats{background:var(--ink);color:#ebe6e4;padding:0}
+.stats .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.stats div{padding:30px 10px;text-align:center;border-inline-end:1px solid #ffffff22}.stats div:last-child{border:0}
+.stats b{display:block;font:400 2.6rem Anton,sans-serif;color:#cfc9c8}
+.stats span{font-size:.88rem;opacity:.8}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 30px}
+.chip{min-height:44px;padding:0 20px;border-radius:99px;border:1.5px solid var(--line);background:var(--card);font:500 .9rem inherit;cursor:pointer;color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;text-align:start;cursor:pointer;padding:0;font:inherit;color:inherit;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 36px #0b0b0b18}
+.card img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.card div{padding:16px 18px 20px}.card h3{font-size:1.45rem;margin-bottom:4px}.card span{color:var(--acc-d);font-size:.88rem;font-weight:600}
+.note{font-size:.85rem;color:var(--mut);margin-top:22px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split img{border-radius:var(--r);aspect-ratio:4/5;object-fit:cover;width:100%}
+.alt{background:#dfd8d6}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px 22px}
+.step::before{counter-increment:s;content:"0" counter(s);font:400 2.2rem Anton,sans-serif;color:var(--acc)}
+.step h3{font-size:1.4rem;margin:6px 0}.step p{font-size:.93rem;color:var(--mut)}
+.caps{display:grid;gap:14px;margin-top:26px}
+.caps div{padding:16px 20px;border-inline-start:3px solid var(--acc);background:var(--card)}.caps strong{display:block;margin-bottom:2px}.caps span{font-size:.92rem;color:var(--mut)}
+details{border-bottom:1px solid var(--line);padding:4px 0}summary{cursor:pointer;min-height:56px;display:flex;align-items:center;font-weight:600;list-style:none;justify-content:space-between;gap:14px}
+summary::after{content:"+";font-size:1.5rem;color:var(--acc)}details[open] summary::after{content:"–"}details p{color:var(--mut);padding:0 0 18px;max-width:64ch}
+.formbox{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px}
+.hint{background:#d9d2d0;border-inline-start:4px solid var(--acc);padding:12px 16px;border-radius:6px;font-weight:600;font-size:.93rem;margin-bottom:18px}
+.ph{border:1.5px dashed #aaa3a1;border-radius:14px;padding:44px 22px;text-align:center;color:var(--mut)}.ph strong{display:block;color:var(--ink);font-size:1.15rem;margin-bottom:8px}
+iframe{width:100%;height:2600px;border:0;border-radius:10px;background:#fff}
+.nf{display:grid;gap:18px}.nf label,.nf legend{font-weight:600;font-size:.95rem;display:block;margin-bottom:6px}.nf fieldset{border:0;padding:0;min-width:0}
+.nf input[type=text],.nf input[type=tel],.nf input[type=number],.nf input[type=url],.nf textarea{width:100%;min-height:48px;padding:10px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;font:inherit;color:var(--ink)}.nf textarea{min-height:110px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}.opts label{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;margin:0;border:1.5px solid var(--line);border-radius:99px;background:#fff;cursor:pointer;font-weight:500}.opts input{accent-color:#0b0b0b;width:18px;height:18px}.opts label:has(input:checked){background:var(--ink);color:#fff;border-color:var(--ink)}
+.nf .btn{font-size:1.05rem;min-height:52px;width:100%}.nf legend{padding:0}.nf fieldset{margin:0}.req{color:#b3261e}.nerr{color:#b3261e;font-size:.88rem;margin-top:4px}.nok{background:#e5efe2;border-radius:12px;padding:22px;text-align:center;font-weight:600}
+.qgrid{display:grid;grid-template-columns:.75fr 1.5fr;gap:28px;align-items:start}.qinfo{background:var(--ink);color:#ebe6e4;border-radius:20px;padding:32px 28px;position:sticky;top:92px}.qinfo h3{font-size:1.9rem;margin-bottom:16px;color:#fff}.qinfo ol{padding-inline-start:22px;display:grid;gap:12px;color:#cfc9c8;font-size:.98rem}.qinfo .contact{margin-top:24px}.qinfo .btn{background:#ebe6e4;color:var(--ink);border-color:#ebe6e4}.qinfo .btn.ghost{background:transparent;color:#fff;border-color:#ffffff66}.qinfo .loc{margin-top:22px;font-size:.88rem;opacity:.7}
+.formbox{box-shadow:0 18px 50px #0b0b0b14}.nf{grid-template-columns:1fr 1fr;gap:20px 18px}.nf .full{grid-column:1/-1}.ng{grid-column:1/-1;display:flex;align-items:center;gap:12px;font:400 1.35rem Anton,Cairo,sans-serif;text-transform:uppercase;letter-spacing:.02em;margin-top:6px;padding-top:16px;border-top:1px solid var(--line)}.ng:first-child{border:0;padding-top:0;margin-top:0}[lang=ar] .ng{font-family:Cairo,sans-serif;font-weight:800;text-transform:none}.ng i{font-style:normal;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;font:600 .85rem Inter,sans-serif}
+.nf input:focus,.nf textarea:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px #0b0b0b1f}.nf .bad input,.nf .bad textarea{border-color:#b3261e}.pv{grid-column:1/-1;background:#f1e8d6;border-inline-start:4px solid #8a8484;border-radius:6px;padding:10px 14px;font-weight:600;font-size:.88rem}
+@media(max-width:860px){.qgrid{grid-template-columns:1fr}.qinfo{position:static;padding:26px 22px}.nf{grid-template-columns:1fr}}
+.contact{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+footer{background:var(--ink);color:#cfc9c8;padding:44px 0 90px;font-size:.9rem}
+footer .logo{color:#fff;font-size:1.7rem;display:block;margin-bottom:8px}
+dialog{border:0;border-radius:18px;padding:0;width:min(780px,calc(100% - 28px));background:var(--bg);color:var(--ink);margin:auto}dialog::backdrop{background:#0b0b0bb0}
+.dl{display:grid;grid-template-columns:1fr 1fr}.carw{position:relative;min-height:min(78vh,600px);background:#dfd8d6}.car{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;height:100%;scrollbar-width:none}.car::-webkit-scrollbar{display:none}.car img{flex:0 0 100%;width:100%;height:100%;object-fit:contain;object-position:center;scroll-snap-align:center;background:#dfd8d6}.cb{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:#ebe6e4e6;font-size:1.7rem;line-height:1;cursor:pointer;color:var(--ink)}.cc{direction:ltr;unicode-bidi:isolate;position:absolute;bottom:10px;inset-inline-end:10px;background:#0b0b0bcc;color:#fff;font-size:.8rem;padding:2px 10px;border-radius:99px}[dir=rtl] .cb{transform:translateY(-50%) scaleX(-1)}.dl>div:last-child{padding:30px}.dl h3{font-size:2rem;margin-bottom:10px;padding-inline-end:46px}.dl p{color:var(--mut);margin-bottom:22px}
+.x{z-index:5;position:absolute;top:10px;inset-inline-end:10px;width:44px;height:44px;border-radius:50%;border:0;background:#fffc;font-size:1.4rem;cursor:pointer}
+.qbar{display:none}
+@media(max-width:860px){nav{display:none}section{padding:60px 0}.split,.dl{grid-template-columns:1fr;gap:30px}.steps{grid-template-columns:1fr 1fr}.carw{height:min(70vh,440px);min-height:0}
+.qbar{display:flex;position:fixed;bottom:0;inset-inline:0;z-index:40;background:var(--ink);padding:10px 14px;padding-bottom:max(10px,env(safe-area-inset-bottom))}.qbar a{flex:1;background:#ebe6e4;color:var(--ink);text-decoration:none;text-align:center;font-weight:700;border-radius:99px;min-height:48px;display:grid;place-items:center}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}.stats b{font-size:1.9rem}.formbox{padding:16px}iframe{height:780px}.grid{grid-template-columns:1fr 1fr;gap:12px}.card div{padding:12px}.card h3{font-size:1.15rem}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="logo" href="#top" aria-label="U-NIT"><img src="assets/images/logo-unit.png" alt="U-NIT Casual Wear" height="38" style="height:38px;width:auto"></a>
+<nav aria-label="Main"><a href="#products" data-en="Products" data-ar="المنتجات"></a><a href="#about" data-en="About" data-ar="عن المصنع"></a><a href="#process" data-en="Process" data-ar="مراحل الشغل"></a><a href="#faq" data-en="FAQ" data-ar="أسئلة"></a><a href="#quote" data-en="Contact" data-ar="تواصل"></a></nav>
+<button class="lang" id="lang" aria-label="Switch language">عربي</button>
+</div></header>
+<main id="top">
+<section class="hero"><img src="assets/images/hero_factory.webp" alt="" fetchpriority="high">
+<div class="wrap"><p class="eyebrow" style="color:#cfc9c8" data-en="Casual wear factory · El Matariya, Cairo" data-ar="مصنع ملابس كاجوال · المطرية، القاهرة"></p>
+<h1 data-en="Made with craft. Built for brands." data-ar="تصنيع بإتقان.. لبراندات بتكبر."></h1>
+<p data-en="U-NIT manufactures garments in bulk for clothing brands, wholesalers and businesses. Tell us what you need and we review it before we quote." data-ar="يونت مصنع ملابس بيصنّع بالجملة للبراندات والتجار والشركات. قولنا محتاج إيه وهنراجع طلبك قبل ما نحدد التكلفة."></p>
+<div class="cta"><a class="btn" href="#quote" data-en="Request manufacturing" data-ar="اطلب تصنيع"></a><a class="btn ghost" href="#products" data-en="View products" data-ar="شوف المنتجات"></a></div></div></section>
+<div class="stripes" aria-hidden="true"></div><div class="stats"><div class="wrap"><div><b>2011</b><span data-en="Established" data-ar="تأسس"></span></div><div><b id="cnt">16</b><span data-en="Product lines" data-ar="أنواع منتجات"></span></div><div><b>B2B</b><span data-en="Brands &amp; wholesalers" data-ar="براندات وتجار جملة"></span></div></div></div>
+
+<section id="products"><div class="wrap">
+<p class="eyebrow" data-en="What we make" data-ar="بنصنّع إيه"></p>
+<h2 data-en="Our product lines" data-ar="خطوط الإنتاج"></h2>
+<p class="lead" data-en="Pick a garment to see details and start your enquiry. Each card shows one model. Swipe to see more photos and colours." data-ar="اختار القطعة وشوف التفاصيل وابدأ طلبك. كل كارت موديل. اسحب يمين وشمال تشوف باقي الصور والألوان."></p>
+<div class="filters" role="group" aria-label="Filter"><button class="chip" data-f="all" aria-pressed="true" data-en="All" data-ar="الكل"></button><button class="chip" data-f="tops" aria-pressed="false" data-en="Tops" data-ar="علوي"></button><button class="chip" data-f="bottoms" aria-pressed="false" data-en="Bottoms" data-ar="سفلي"></button><button class="chip" data-f="sets" aria-pressed="false" data-en="Sets" data-ar="أطقم"></button></div>
+<div class="grid" id="grid"></div>
+<p class="note" data-en="More models and colours are being added regularly." data-ar="بنضيف موديلات وألوان جديدة باستمرار."></p>
+</div></section>
+
+<section id="about" class="alt"><div class="wrap split">
+<img src="assets/images/factory_floor.webp" alt="" loading="lazy">
+<div><p class="eyebrow" data-en="About U-NIT" data-ar="عن يونت"></p>
+<h2 data-en="Since 2011, one workshop floor at a time." data-ar="من 2011، بنشتغل بإيدينا وبضمير."></h2>
+<p class="lead" data-en="U-NIT is a family clothing factory in El Matariya, Cairo, led by Mahmoud Mehana. We work with brands, wholesalers and businesses that want reliable bulk production, not single pieces." data-ar="يونت مصنع ملابس عائلي في المطرية بالقاهرة، يديره الأستاذ محمود مهنا. بنشتغل مع البراندات والتجار والشركات اللي محتاجة تصنيع بالجملة بثقة، مش بيع بالقطعة."></p>
+<div class="caps"><div><strong data-en="Review before quote" data-ar="مراجعة قبل التسعير"></strong><span data-en="We study every request before giving a price." data-ar="بنراجع كل طلب قبل ما نحدد السعر."></span></div><div><strong data-en="Custom styles" data-ar="موديلات حسب الطلب"></strong><span data-en="Bring your own design or reference image." data-ar="هات تصميمك أو صورة مرجعية."></span></div></div></div></div></section>
+
+<section id="process"><div class="wrap">
+<p class="eyebrow" data-en="How it works" data-ar="إزاي بنشتغل"></p><h2 data-en="From enquiry to delivery" data-ar="من الطلب للتسليم"></h2>
+<div class="steps"><div class="step"><h3 data-en="Send your enquiry" data-ar="ابعت طلبك"></h3><p data-en="Fill the form with products and estimated quantity." data-ar="املا الفورم بالمنتجات والكمية المتوقعة."></p></div><div class="step"><h3 data-en="We review" data-ar="بنراجع"></h3><p data-en="Our team studies your requirements." data-ar="فريقنا بيدرس متطلباتك."></p></div><div class="step"><h3 data-en="We contact you" data-ar="بنتواصل معاك"></h3><p data-en="We reply on WhatsApp or by phone." data-ar="بنرد عليك واتساب أو تليفون."></p></div><div class="step"><h3 data-en="Production" data-ar="التصنيع"></h3><p data-en="Details and timing are agreed together." data-ar="التفاصيل والمواعيد بنتفق عليها سوا."></p></div></div>
+</div></section>
+
+<section id="faq" class="alt"><div class="wrap" style="max-width:820px">
+<p class="eyebrow" data-en="Buyer FAQ" data-ar="أسئلة التجار"></p><h2 data-en="Common questions" data-ar="أسئلة شائعة"></h2>
+<details><summary data-en="Do you sell single pieces?" data-ar="بتبيعوا بالقطعة؟"></summary><p data-en="No. U-NIT is a manufacturer for brands, wholesalers and businesses." data-ar="لا. يونت مصنع للبراندات والتجار والشركات فقط."></p></details>
+<details><summary data-en="What are the prices and minimum quantities?" data-ar="الأسعار والحد الأدنى للكمية كام؟"></summary><p data-en="They depend on the style, fabric and quantity. Send an enquiry and we will review it and reply." data-ar="بتختلف حسب الموديل والقماش والكمية. ابعت طلبك وهنراجعه ونرد عليك."></p></details>
+<details><summary data-en="Can I bring my own design?" data-ar="ينفع أجيب تصميمي؟"></summary><p data-en="Yes. Add a link to your reference image in the form." data-ar="أه. حط رابط صورة التصميم في الفورم."></p></details>
+<details><summary data-en="How do you use my phone number?" data-ar="هتستخدموا رقمي في إيه؟"></summary><p data-en="Only to reply to your enquiry." data-ar="للرد على استفسارك فقط."></p></details>
+</div></section>
+
+<section id="quote"><div class="wrap">
+<p class="eyebrow" data-en="Wholesale enquiry" data-ar="طلب جملة"></p><h2 data-en="Request manufacturing" data-ar="اطلب تصنيع"></h2>
+<p class="lead" style="margin-bottom:34px" data-en="For brands, wholesalers and businesses only. Fill the form and send it. We review every request before quoting." data-ar="للبراندات والتجار والشركات فقط. املا الفورم وابعته، وبنراجع كل طلب قبل التسعير."></p>
+<div class="qgrid"><aside class="qinfo"><h3 data-en="How it works" data-ar="إزاي بنشتغل"></h3>
+<ol><li data-en="Fill the form with your products and estimated quantity." data-ar="املا الفورم بالمنتجات والكمية المتوقعة."></li><li data-en="We review your request." data-ar="بنراجع طلبك."></li><li data-en="We contact you on WhatsApp or by phone." data-ar="بنتواصل معاك واتساب أو تليفون."></li></ol>
+<div class="contact" id="contact"></div>
+<p class="loc" data-en="U-NIT · El Matariya, Cairo, Egypt" data-ar="يونت · المطرية، القاهرة، مصر"></p></aside>
+<div class="formbox"><div class="hint" id="hint" hidden></div>
+<div id="ph" class="ph"><strong data-en="Enquiry form is not connected yet" data-ar="فورم الطلب لسه مش متوصّل"></strong><span data-en="Preview only. No requests are being received at the moment." data-ar="معاينة فقط. مفيش طلبات بتتستقبل حالياً."></span></div>
+<form id="nf" class="nf" hidden novalidate></form><div id="nok" class="nok" hidden data-en="Thank you! Your enquiry has been submitted. We will review it and contact you." data-ar="شكراً ليك! الطلب اتبعت. هنراجعه ونتواصل معاك."></div>
+<div id="fw" hidden><iframe id="fr" title="U-NIT enquiry form" loading="lazy"></iframe><p style="margin-top:14px;font-size:.9rem"><a id="ext" class="btn" target="_blank" rel="noopener" data-en="Form not loading? Open it in a new tab" data-ar="الفورم مش بيظهر؟ افتحه في تاب جديد"></a></p></div></div>
+</div></div></section>
+</main>
+<footer><div class="wrap"><img src="assets/images/logo-unit-white.png" alt="U-NIT Casual Wear" style="height:44px;width:auto;margin-bottom:12px"><span data-en="Casual wear manufacturing · Since 2011 · El Matariya, Cairo" data-ar="تصنيع ملابس كاجوال · منذ 2011 · المطرية، القاهرة"></span><br><small>© U-NIT</small></div></footer>
+<div class="qbar"><a href="#quote" data-en="Request manufacturing" data-ar="اطلب تصنيع"></a></div>
+<dialog id="dlg" aria-labelledby="dt"><button class="x" id="dx" aria-label="Close">×</button><div class="dl"><div class="carw"><div id="car" class="car" tabindex="0" aria-label="Photos"></div><button id="cp" class="cb" style="inset-inline-start:8px" aria-label="Previous">‹</button><button id="cn" class="cb" style="inset-inline-end:8px" aria-label="Next">›</button><span id="cx" class="cc"></span></div><div><h3 id="dt"></h3><p id="dd"></p><a class="btn" id="dc" href="#quote"></a></div></div></dialog>
+<script src="js/config.js"></script>
+<script>
+const P=[
+{g:'tops',en:'Ringer T-Shirt',ar:'تيشيرت رينجر',de:'Classic tee with contrast collar and sleeve trim.',da:'تيشيرت كلاسيك بياقة وأكمام بلون مختلف.',im:['tshirts-1','tshirts-2']},
+{g:'tops',en:'Layered Hem Distressed T-Shirt',ar:'تيشيرت بحافة مقطّعة وطبقتين',de:'Oversized tee with a layered distressed hem and sleeve patch, in four colours.',da:'تيشيرت واسع بحافة مقطّعة بطبقتين وقطعة على الكم، بأربع ألوان.',im:['tees-1']},
+{g:'tops',en:'Raw-Seam T-Shirt',ar:'تيشيرت بخياطة خام',de:'Oversized tee with exposed raw seams and a rubber patch, in four colours.',da:'تيشيرت واسع بخياطة خام ظاهرة وليبل مطاطي، بأربع ألوان.',im:['tees-2']},
+{g:'tops',en:'Polo Shirts',ar:'بولو شيرت',de:'Classic polo styles with clean finishing.',da:'بولو كلاسيك بتشطيب نظيف.',im:['product_1'],ph:1},
+{g:'tops',en:'Piped Zip Hoodie',ar:'هودي بسوستة وشريط أبيض',de:'Oversized hoodie with a contrast white piping and half zip, in black and beige.',da:'هودي واسع بنص سوستة وشريط أبيض على الحواف، أسود وبيج.',im:['hoodp-1','hoodp-2']},
+{g:'tops',en:'Colour-Block Hoodie',ar:'هودي بغطا مختلف اللون',de:'Pullover hoodie with a contrast hood and layered hem, in several colours.',da:'هودي بدون سوستة بغطا بلون مختلف وحافة مزدوجة، بألوان مختلفة.',im:['hoodc-1','hoodc-2']},
+{g:'tops',en:'Sweatshirts',ar:'سويت شيرتات',de:'Sweatshirts for the cooler seasons.',da:'سويت شيرتات للمواسم الباردة.',im:['product_6'],ph:1},
+{g:'bottoms',en:'Pocket Shorts',ar:'شورت بجيوب',de:'Soft sweat shorts with front pockets, in several colours.',da:'شورت قطن ناعم بجيوب قدّامية وبألوان مختلفة.',im:['shorts-1','shorts-2']},
+{g:'bottoms',en:'Distressed Side-Stripe Shorts',ar:'شورت مقطّع بشريط جانبي',de:'Washed look with distressing and a side stripe.',da:'شورت بغسلة وتقطيع وشريط جانبي.',im:['shorts-10','shorts-3']},
+{g:'bottoms',en:'Embossed Logo Shorts',ar:'شورت بشعار بارز',de:'Soft sweat shorts with a large embossed lettering, in black, white and green.',da:'شورت قطن ناعم بكتابة بارزة كبيرة، أسود وأبيض وأخضر.',im:['shorts-11']},
+{g:'bottoms',en:'Wide Shorts with Clip',ar:'شورت واسع بكليب',de:'Relaxed wide-cut shorts with a metal clip.',da:'شورت واسع مريح بكليب معدن.',im:['shorts-8','shorts-4','shorts-9']},
+{g:'bottoms',en:'Cargo Shorts',ar:'شورت كارجو',de:'Cargo shorts with large flap pockets.',da:'شورت كارجو بجيوب كبيرة بغطا.',im:['shorts-6','shorts-7','shorts-5']},
+{g:'bottoms',en:"Men's Pants",ar:'بناطيل رجالي',de:"Men's pants.",da:'بناطيل رجالي.',im:['product_3'],ph:1},
+{g:'bottoms',en:"Wide-Leg Pants (Women)",ar:'بنطلون وايد ليج حريمي',de:'Plain wide-leg pants for women.',da:'بنطلون وايد ليج سادة حريمي.',im:['mpants-1']},
+{g:'bottoms',en:'Striped Wide-Leg Pants (Women)',ar:'وايد ليج بخطوط حريمي',de:'Wide-leg pants with twin side stripes.',da:'بنطلون وايد ليج بخطين جانبيين حريمي.',im:['wpants-1','wpants-5']},
+{g:'bottoms',en:'Charleston Pants with Stripes (Women)',ar:'بنطلون شارلستون بخطوط حريمي',de:'Fitted at the top and flared below, with side stripes.',da:'ضيق من فوق ومتوسّع من تحت بخطوط جانبية، حريمي.',im:['wpants-2']},
+{g:'bottoms',en:'Charleston Pants with Slit (Women)',ar:'بنطلون شارلستون بفتحة حريمي',de:'Fitted and flared with a slit at the hem.',da:'ضيق ومتوسّع من تحت بفتحة عند الأسفل، حريمي.',im:['wpants-3','wpants-6']},
+{g:'bottoms',en:'Charleston Pants with Wide Stripe (Women)',ar:'بنطلون شارلستون بخط عريض حريمي',de:'Fitted and flared with a bold side stripe.',da:'ضيق ومتوسّع من تحت بخط جانبي عريض، حريمي.',im:['wpants-4']},
+{g:'bottoms',en:'Leggings (Women)',ar:'ليجن حريمي',de:'High-waist fitted leggings.',da:'ليجن ضيق بخصر عالي، حريمي.',im:['wpants-7']},
+{g:'bottoms',en:'Cargo Sweatpants',ar:'سروال كارجو',de:'Relaxed fleece sweatpants with large cargo pockets and drawcord hems.',da:'سروال قطن مبطّن مريح بجيوب كارجو كبيرة وأستك سحاب عند الأسفل.',im:['sweatpants-1']},
+{g:'sets',en:'Zip Jacket Set',ar:'طقم جاكيت بسوستة',de:'High-collar zip jacket with matching pants, in black and grey.',da:'جاكيت بياقة عالية وسوستة مع بنطلون بنفس القماش، أسود ورمادي.',im:['sets-1','sets-2','sets-3','sets-4']},
+{g:'sets',en:'Clasp Hoodie Set',ar:'طقم هودي بمشابك',de:'Hoodie with metal clasps and matching pants, in several colours.',da:'هودي بمشابك معدن مع بنطلون بنفس القماش وبألوان مختلفة.',im:['hoodies-1','hoodies-2','sets-5','sets-7','sets-6','sets-8','sets-9']},
+{g:'sets',en:'Sleeveless Hoodie & Shorts Set',ar:'طقم هودي بدون أكمام وشورت',de:'Sleeveless hoodie with matching shorts and embroidered text, in black, white and cream.',da:'هودي بدون أكمام مع شورت بنفس القماش وتطريز، أسود وأبيض وكريم.',im:['sets-10','sets-11']},
+{g:'sets',en:'Hoodie Set',ar:'طقم هودي',de:'Zip and pullover hoodies with matching pants.',da:'هوديز بسوستة وبدون مع بنطلون بنفس القماش.',im:['hoodies-3']}];
+const src=f=>(typeof IMGS!=='undefined'&&IMGS[f])||`assets/images/${f}.webp`;
+const C=window.NULRA_CONFIG||{},$=s=>document.querySelector(s);let lang='en',filt='all',cur=null;
+const T=(en,ar)=>lang==='ar'?ar:en;
+function formUrl(v){try{const u=new URL((v||'').trim());if(u.protocol!=='https:'||u.hostname!=='docs.google.com'||!/^\/forms\/d\/(e\/)?[\w-]+\/viewform\/?$/.test(u.pathname))return null;u.searchParams.set('embedded','true');return u.href}catch{return null}}
+function grid(){$('#cnt').textContent=P.length;$('#grid').innerHTML=P.map((p,i)=>(filt==='all'||p.g===filt)?`<button class="card" data-i="${i}"><img src="${src(p.im[0])}" alt="" loading="lazy">${p.ph?'<em class="soon">'+T('Photo soon','الصورة قريباً')+'</em>':''}<div><h3>${T(p.en,p.ar)}</h3><span>${p.im.length>1?T(p.im.length+' photos',p.im.length+' صور')+' · ':''}${T('View','شوف')} →</span></div></button>`:'').join('')}
+function formOld(){const u=formUrl(lang==='ar'?C.googleFormAr:C.googleFormEn);$('#ph').hidden=!!u;$('#fw').hidden=!u;if(u){const f=$('#fr');if(f.getAttribute('src')!==u)f.src=u;$('#ext').href=u.replace(/([?&])embedded=true(&|$)/,(m,b,a)=>a?b:'')}}
+function contact(){const w=(C.whatsappNumber||'').replace(/\D/g,''),f=C.facebookUrl,h=[];if(w)h.push(`<a class="btn" target="_blank" rel="noopener" href="https://wa.me/${w}">WhatsApp</a>`);if(/^https:\/\/(www\.)?facebook\.com\//.test(f||''))h.push(`<a class="btn ghost" target="_blank" rel="noopener" href="${f}">Facebook</a>`);$('#contact').innerHTML=h.join('')}
+function form(){if(nativeOK()){$('#ph').hidden=true;$('#fw').hidden=true;if($('#nok').hidden){$('#nf').hidden=false;renderNF()}return}formOld()}
+function fill(){const p=P[cur];$('#car').innerHTML=p.im.map(f=>`<img src="${src(f)}" alt="">`).join('');$('#car').scrollLeft=0;nav();$('#dt').textContent=T(p.en,p.ar);$('#dd').textContent=T(p.de,p.da);$('#dc').textContent=T('Enquire about this','اطلب التصنيع');$('#cn').hidden=$('#cp').hidden=$('#cx').hidden=p.im.length<2}
+function nav(){const c=$('#car'),n=P[cur].im.length,w=c.clientWidth||1,k=Math.min(n,Math.round(Math.abs(c.scrollLeft)/w)+1);$('#cx').textContent=k+' / '+n}
+function apply(){document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';document.querySelectorAll('[data-en]').forEach(e=>e.textContent=e.dataset[lang]);$('#lang').textContent=lang==='ar'?'EN':'عربي';$('#dx').setAttribute('aria-label',T('Close','إغلاق'));grid();form();contact();if(cur!==null)fill()}
+$('#lang').onclick=()=>{lang=lang==='ar'?'en':'ar';apply()};
+document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{filt=b.dataset.f;document.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b));grid()});
+$('#grid').onclick=e=>{const c=e.target.closest('.card');if(!c)return;cur=+c.dataset.i;fill();$('#dlg').showModal()};
+$('#car').onscroll=nav;const go=d=>$('#car').scrollBy({left:d*$('#car').clientWidth*(document.dir==='rtl'?-1:1),behavior:'smooth'});$('#cn').onclick=()=>go(1);$('#cp').onclick=()=>go(-1);$('#dx').onclick=()=>$('#dlg').close();$('#dlg').onclick=e=>{if(e.target.id==='dlg')e.target.close()};
+$('#dc').onclick=()=>{$('#dlg').close();const p=P[cur],h=$('#hint');h.hidden=false;h.textContent=T(`Interested in ${p.en}? Select the same product in the form below.`,`مهتم بـ ${p.ar}؟ اختار نفس المنتج في الفورم تحت.`)};
+const NQ=[
+{k:'name',t:'text',r:1,en:'Full Name',ar:'الاسم بالكامل'},
+{k:'business',t:'text',r:1,en:'Business / Brand Name',ar:'اسم المحل أو البراند'},
+{k:'type',t:'radio',r:1,en:'Your Business Type',ar:'نوع نشاطك',o:[['Clothing brand','براند ملابس'],['Wholesaler','تاجر جملة'],['Retail shop owner (bulk manufacturing only)','صاحب محل (تصنيع بالجملة فقط)'],['Company','شركة'],['Other','أخرى']]},
+{k:'phone',t:'tel',r:1,en:'Phone / WhatsApp Number',ar:'رقم التليفون أو واتساب'},
+{k:'city',t:'text',en:'City / Governorate',ar:'المدينة / المحافظة'},
+{k:'products',t:'check',r:1,en:'What would you like to manufacture?',ar:'عايز تصنّع إيه؟',o:[['T-Shirts','تيشيرتات'],['Polo Shirts','بولو شيرت'],['Shorts','شورتات'],["Men's Pants",'بناطيل رجالي'],["Women's Pants (Wide-Leg / Charleston)",'بناطيل حريمي (وايد ليج / شارلستون)'],['Sets','أطقم'],['Sweatshirts','سويت شيرتات'],['Hoodies','هوديز'],['Sweatpants','سراويل'],['Other / Custom Style','موديل مختلف / تصميم خاص']]},
+{k:'qty',t:'number',r:1,en:'Estimated Quantity (pieces)',ar:'الكمية المتوقعة (بالقطعة)'},
+{k:'sizes',t:'check',en:'Sizes Needed',ar:'المقاسات المطلوبة',o:[['XS','XS'],['S','S'],['M','M'],['L','L'],['XL','XL'],['XXL','XXL'],['Other / Custom','مقاسات خاصة']]},
+{k:'details',t:'area',en:'Details of Your Order',ar:'تفاصيل طلب التصنيع'},
+{k:'ref',t:'url',en:'Reference / Design Image Link',ar:'رابط صورة الموديل أو التصميم'},
+{k:'contact',t:'radio',en:'Preferred Contact Method',ar:'طريقة التواصل المفضلة',o:[['WhatsApp','واتساب'],['Phone call','مكالمة هاتف']]}];
+const NE=C.formEntries||{},NL=C.formLang==='ar'?1:0;
+const nativeOK=()=>!!C.formPreview||['name','business','type','phone','products','qty'].every(k=>/^entry\.\d+$/.test(NE[k]||''))&&!!formUrl(C.googleFormAr||C.googleFormEn);
+const GH={name:[1,'Your details','بياناتك'],products:[2,'Your order','طلبك'],details:[3,'Extras','تفاصيل إضافية']};
+const NA=q=>NE[q.k]||C.formPreview;
+function renderNF(){const f=$('#nf');f.innerHTML=(C.formPreview?`<div class="pv">${T('Design preview only. This form is not connected yet and nothing is sent.','معاينة للشكل فقط. الفورم لسه مش متوصّل ومفيش حاجة بتتبعت.')}</div>`:'')+NQ.filter(NA).map(q=>{const L=T(q.en,q.ar)+(q.r?' <span class="req">*</span>':'');let b;
+if(q.t==='radio'||q.t==='check')b=`<fieldset><legend>${L}</legend><div class="opts">${q.o.map((o,i)=>`<label><input type="${q.t==='radio'?'radio':'checkbox'}" name="${q.k}" value="${o[NL].replace(/"/g,'&quot;')}"${q.t==='radio'&&q.r&&i===0?'':''}>${T(o[0],o[1])}</label>`).join('')}</div></fieldset>`;
+else if(q.t==='area')b=`<label>${L}<textarea name="${q.k}" rows="4"></textarea></label>`;
+else b=`<label>${L}<input type="${q.t}" name="${q.k}"${q.t==='number'?' min="1" inputmode="numeric"':''}${q.t==='tel'?' inputmode="tel"':''}></label>`;
+const g=GH[q.k]?`<div class="ng"><i>${GH[q.k][0]}</i>${T(GH[q.k][1],GH[q.k][2])}</div>`:'';return g+`<div data-q="${q.k}" class="${['text','tel','number','url'].includes(q.t)?'':'full'}">${b}<div class="nerr" hidden></div></div>`}).join('')+`<button class="btn" type="submit">${T('Send enquiry','ابعت الطلب')}</button><p class="note" style="margin:0">${T('We use your details only to reply to your enquiry.','هنستخدم بياناتك للرد على استفسارك فقط.')}</p>`}
+function sendNF(e){e.preventDefault();const f=$('#nf'),fd=new FormData(),bad=[];
+NQ.filter(NA).forEach(q=>{const box=f.querySelector(`[data-q="${q.k}"]`),err=box.querySelector('.nerr');let v;
+if(q.t==='check'){v=[...f.querySelectorAll(`[name="${q.k}"]:checked`)].map(i=>i.value)}else if(q.t==='radio'){const c=f.querySelector(`[name="${q.k}"]:checked`);v=c?[c.value]:[]}else{v=[f.querySelector(`[name="${q.k}"]`).value.trim()].filter(Boolean)}
+let m='';if(q.r&&!v.length)m=T('Required','مطلوب');else if(q.t==='number'&&v.length&&!(+v[0]>=1))m=T('Enter 1 or more','اكتب رقم 1 أو أكتر');else if(q.t==='url'&&v.length&&!/^https?:\/\/\S+$/i.test(v[0]))m=T('Enter a valid link','اكتب لينك صحيح');else if(q.t==='tel'&&v.length&&v[0].replace(/\D/g,'').length<7)m=T('Enter a valid number','اكتب رقم صحيح');
+err.textContent=m;err.hidden=!m;box.classList.toggle('bad',!!m);if(m)bad.push(box);v.forEach(x=>fd.append(NE[q.k],x))});
+if(bad.length){bad[0].scrollIntoView({behavior:'smooth',block:'center'});return}
+const btn=f.querySelector('button');if(C.formPreview){f.hidden=true;const o=$('#nok');o.textContent=T('Preview only: the form is not connected yet, so nothing was sent.','معاينة فقط: الفورم لسه مش متوصّل فمفيش حاجة اتبعتت.');o.hidden=false;return}btn.disabled=true;
+fetch((C.googleFormAr||C.googleFormEn).replace(/\/viewform.*$/,'/formResponse'),{method:'POST',mode:'no-cors',body:fd}).then(()=>{f.hidden=true;$('#nok').hidden=false;$('#nok').scrollIntoView({behavior:'smooth',block:'center'})}).catch(()=>{btn.disabled=false;alert(T('Could not send. Please check your connection and try again.','مقدرناش نبعت. اتأكد من النت وجرّب تاني.'))})}
+$('#nf').addEventListener('submit',sendNF);
+
+apply();
+</script>
+</body></html>
