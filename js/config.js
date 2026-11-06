@@ -6,7 +6,7 @@ window.NULRA_CONFIG = {
   googleFormAr: 'https://docs.google.com/forms/d/e/1FAIpQLSfogbamkoUnySf11Ba3awMP-6ISJ5MeF15nYpmiuYSCTzq-PQ/viewform?embedded=true', // Arabic Google Form public EMBED URL
   formPreview: true, // true = non-sending design preview. Set to false ONLY after the order endpoint is tested.
   // Order endpoint = the deployed Google Apps Script web app (see apps-script/README_AR.md).
-  orderEndpoint: '', // https://script.google.com/macros/s/XXXX/exec
+  orderEndpoint: 'https://script.google.com/macros/s/AKfycbxryeSX22jo__YeZY3QoNm0MD1wV5f9iatNGh-vSpT-KYPtRp-hF9WcnhEK8pMCaC6ePg/exec', // https://script.google.com/macros/s/XXXX/exec
   whatsappNumber: '', // Verified WhatsApp number, e.g. 201xxxxxxxxx
   facebookUrl: '' // Verified Facebook business page
 };
