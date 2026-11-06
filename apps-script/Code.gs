@@ -3,7 +3,7 @@
  * Deploy as a Web app (Execute as: Me, Who has access: Anyone). See README_AR.md.
  */
 const CFG = {
-  SHEET_ID: '1J_UQ6YsZKII-5XJxHWgaeSM92HblBDBNPrFbWZkA_tc',
+  OWNER_EMAIL: 'mangermahmoudmehana@gmail.com',
   TAB: 'طلبات الموقع',
   FOLDER: 'U-NIT طلبات الموقع - صور',
   NOTIFY: ['moustafa.mahmoudx7@gmail.com', 'qa25ws14ed36@gmail.com'],
@@ -100,7 +100,7 @@ function rate_() {
   return true;
 }
 function sheet_() {
-  const ss = SpreadsheetApp.openById(CFG.SHEET_ID);
+  const ss = SpreadsheetApp.openById(PropertiesService.getScriptProperties().getProperty('WEBSITE_SHEET_ID'));
   let sh = ss.getSheetByName(CFG.TAB);
   if (!sh) {
     sh = ss.insertSheet(CFG.TAB);
@@ -116,7 +116,17 @@ function folder_() {
   const f = DriveApp.createFolder(CFG.FOLDER);
   props.setProperty('WEBSITE_PHOTO_FOLDER', f.getId());
   f.setSharing(DriveApp.Access.PRIVATE, DriveApp.Permission.NONE);
+  shareFolder_(f);
   return f;
+}
+/** Gives the notification accounts view access to the whole folder, once. Safe to run again. */
+function shareFolder_(folder) {
+  const owner = folder.getOwner().getEmail().toLowerCase();
+  const have = folder.getViewers().map(u => u.getEmail().toLowerCase());
+  CFG.NOTIFY.forEach(function (m) {
+    const e = m.toLowerCase();
+    if (e !== owner && have.indexOf(e) === -1) folder.addViewer(m);
+  });
 }
 function savePhotos_(d) {
   const photos = d.photos || [];
@@ -130,7 +140,6 @@ function savePhotos_(d) {
       const file = f.createFile(blob);
       created.push(file);
       file.setSharing(DriveApp.Access.PRIVATE, DriveApp.Permission.NONE);
-      CFG.NOTIFY.filter(m => m !== file.getOwner().getEmail()).forEach(m => file.addViewer(m));
       links.push(file.getUrl());
     });
   } catch (error) {
@@ -164,7 +173,7 @@ function sendMail_(d, links) {
   }).map(function (r) {
     return '<tr><td style="border:1px solid #ddd"><b>' + r[0] + '</b></td><td style="border:1px solid #ddd">' + esc(r[1]) + '</td></tr>';
   }).join('') + '</table>';
-  // one message, addressed to both accounts: each address gets exactly one notification
+  // One message addressed to both recipients. Retries can repeat delivery after an ambiguous failure.
   MailApp.sendEmail({
     to: CFG.NOTIFY.join(','),
     subject: 'طلب تصنيع جديد من الموقع — ' + d.business + ' (' + d.name + ')',
@@ -216,4 +225,33 @@ function safe_(v) {
 }
 function out_(o) {
   return ContentService.createTextOutput(JSON.stringify(o)).setMimeType(ContentService.MimeType.JSON);
+}
+
+/** Run once from the editor on the factory account. Safe to run again. */
+function setupFactory() {
+  if (Session.getEffectiveUser().getEmail() !== CFG.OWNER_EMAIL) {
+    throw new Error('Run setup using the factory account only.');
+  }
+  const lock = LockService.getScriptLock();
+  lock.waitLock(25000);
+  try {
+    const props = PropertiesService.getScriptProperties();
+    if (!props.getProperty('WEBSITE_SHEET_ID')) {
+      const spreadsheet = SpreadsheetApp.create('U-NIT | طلبات الموقع');
+      props.setProperty('WEBSITE_SHEET_ID', spreadsheet.getId());
+      const sheet = spreadsheet.getSheets()[0];
+      sheet.setName(CFG.TAB);
+      sheet.appendRow(HEAD);
+      sheet.setFrozenRows(1);
+      sheet.getRange(1, 1, 1, HEAD.length).setFontWeight('bold').setBackground('#e7e2dc');
+    }
+    const sheet = sheet_();
+    const folder = folder_();
+    shareFolder_(folder);
+    setupRetryTrigger();
+    console.log('Orders sheet: ' + sheet.getParent().getUrl());
+    console.log('Private photos folder: ' + folder.getUrl());
+  } finally {
+    lock.releaseLock();
+  }
 }
